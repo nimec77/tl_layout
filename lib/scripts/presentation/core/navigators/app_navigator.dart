@@ -9,6 +9,8 @@ import 'package:tl_layout/scripts/presentation/story_on_click/story_on_click.dar
 import '../app_widget.dart';
 
 class AppNavigator extends StatelessWidget {
+  final heroController = HeroController();
+
   @override
   Widget build(BuildContext context) {
     final state = context.watch<RouterBloc>().state;
@@ -32,6 +34,7 @@ class AppNavigator extends StatelessWidget {
         }
         return true;
       },
+      observers: [heroController],
     );
   }
 }

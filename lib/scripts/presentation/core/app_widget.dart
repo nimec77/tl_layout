@@ -24,6 +24,18 @@ class AppWidget extends StatelessWidget {
                 onPressed: () => context.read<RouterBloc>().add(const RouterEvent.storyOnClickPressed()),
                 title: 'Рассказ по клику',
               ),
+              const SizedBox(height: 40),
+              SizedBox(
+                width: 100,
+                height: 100,
+                child: GestureDetector(
+                  onTap: () => context.read<RouterBloc>().add(const RouterEvent.storyOnClickPressed()),
+                  child: Hero(
+                    tag: 'Earth',
+                    child: Image.asset('assets/earth.gif', fit: BoxFit.cover),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

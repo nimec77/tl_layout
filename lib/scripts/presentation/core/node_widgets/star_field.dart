@@ -25,6 +25,11 @@ class StarField extends NodeWithSize {
         _image = spriteSheet.image,
         super(size);
 
+  @override
+  void spriteBoxPerformedLayout() {
+    _addStarts();
+  }
+
   void _addStarts() {
     _startPosition = [];
     _startScales = [];
@@ -39,11 +44,6 @@ class StarField extends NodeWithSize {
       _colors.add(Color.fromARGB((255 * (randomDouble() * 0.5 + 0.5)).toInt(), 255, 255, 255));
       _rects.add(spriteSheet['star_${randomInt(3)}.png'].frame);
     }
-  }
-
-  @override
-  void spriteBoxPerformedLayout() {
-    _addStarts();
   }
 
   @override
