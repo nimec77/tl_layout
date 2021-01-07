@@ -6,6 +6,7 @@ import 'package:tl_layout/scripts/presentation/core/contexts/sprite_inherited_wi
 import 'package:tl_layout/scripts/presentation/core/node_widgets/star_field.dart';
 import 'package:tl_layout/scripts/presentation/core/node_widgets/starry_sky.dart';
 import 'package:tl_layout/scripts/presentation/core/widgets/build_sky.dart';
+import 'package:tl_layout/scripts/presentation/show_where/widgets/planets_grid.dart';
 
 class ShowWhere extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class ShowWhere extends StatefulWidget {
 
 class _ShowWhereState extends State<ShowWhere> {
   SpriteData _spriteData;
-  bool _isDynamicStarts = true;
+  bool _isDynamicStarts = false;
 
   @override
   void initState() {
@@ -41,12 +42,7 @@ class _ShowWhereState extends State<ShowWhere> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
-                child: Center(
-                  child: Text(
-                    'Покажи, где...',
-                    style: Theme.of(context).textTheme.headline6.copyWith(color: Colors.white),
-                  ),
-                ),
+                child: PlanetsGrid(),
               ),
               SizedBox(
                 width: 265,

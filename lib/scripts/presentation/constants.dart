@@ -14,8 +14,12 @@ const kStarField = 'assets/starfield.png';
 const kSpriteSheet = 'assets/sprites.png';
 const kSpriteJson = 'assets/sprites.json';
 const kNumStarts = 500;
-const kStarColors = [
-  Color(0xff4becff),
-  Color(0xff33e5ff),
-  Color(0xff8330ff),
+const kPlanetList = [
+  'assets/mercury.gif',
+  'assets/venus.gif',
+  'assets/earth.gif',
+  'assets/mars.gif',
+  'assets/jupiter.gif',
+  'assets/saturn.gif',
+  'assets/uranus.gif',
 ];
