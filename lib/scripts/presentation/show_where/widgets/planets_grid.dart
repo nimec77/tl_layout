@@ -4,7 +4,7 @@ import 'package:tl_layout/scripts/presentation/constants.dart';
 import 'package:tl_layout/scripts/presentation/show_where/widgets/planet_item.dart';
 
 class PlanetsGrid extends StatelessWidget {
-  final randomIterator = RandomIterator(kPlanetList.length);
+  final randomIterator = RandomIterator(kPlanetList.length, 6, 5);
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;

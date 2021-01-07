@@ -22,4 +22,5 @@ const kPlanetList = [
   'assets/jupiter.gif',
   'assets/saturn.gif',
   'assets/uranus.gif',
+  'assets/neptune.gif',
 ];
