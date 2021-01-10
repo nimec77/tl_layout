@@ -14,18 +14,18 @@ class _$RouterEventTearOff {
   const _$RouterEventTearOff();
 
 // ignore: unused_element
-  _ReturnedToMain returnedToMain() {
-    return const _ReturnedToMain();
+  ReturnedToMain returnedToMain() {
+    return const ReturnedToMain();
   }
 
 // ignore: unused_element
-  _ShowWherePressed showWherePressed() {
-    return const _ShowWherePressed();
+  RouterEventShowWherePressed showWherePressed() {
+    return const RouterEventShowWherePressed();
   }
 
 // ignore: unused_element
-  _StoryOnClickPressed storyOnClickPressed() {
-    return const _StoryOnClickPressed();
+  RouterEventStoryOnClickPressed storyOnClickPressed() {
+    return const RouterEventStoryOnClickPressed();
   }
 }
 
@@ -50,15 +50,15 @@ mixin _$RouterEvent {
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult returnedToMain(_ReturnedToMain value),
-    @required TResult showWherePressed(_ShowWherePressed value),
-    @required TResult storyOnClickPressed(_StoryOnClickPressed value),
+    @required TResult returnedToMain(ReturnedToMain value),
+    @required TResult showWherePressed(RouterEventShowWherePressed value),
+    @required TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult returnedToMain(_ReturnedToMain value),
-    TResult showWherePressed(_ShowWherePressed value),
-    TResult storyOnClickPressed(_StoryOnClickPressed value),
+    TResult returnedToMain(ReturnedToMain value),
+    TResult showWherePressed(RouterEventShowWherePressed value),
+    TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
     @required TResult orElse(),
   });
 }
@@ -80,27 +80,26 @@ class _$RouterEventCopyWithImpl<$Res> implements $RouterEventCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ReturnedToMainCopyWith<$Res> {
-  factory _$ReturnedToMainCopyWith(
-          _ReturnedToMain value, $Res Function(_ReturnedToMain) then) =
-      __$ReturnedToMainCopyWithImpl<$Res>;
+abstract class $ReturnedToMainCopyWith<$Res> {
+  factory $ReturnedToMainCopyWith(
+          ReturnedToMain value, $Res Function(ReturnedToMain) then) =
+      _$ReturnedToMainCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ReturnedToMainCopyWithImpl<$Res>
-    extends _$RouterEventCopyWithImpl<$Res>
-    implements _$ReturnedToMainCopyWith<$Res> {
-  __$ReturnedToMainCopyWithImpl(
-      _ReturnedToMain _value, $Res Function(_ReturnedToMain) _then)
-      : super(_value, (v) => _then(v as _ReturnedToMain));
+class _$ReturnedToMainCopyWithImpl<$Res> extends _$RouterEventCopyWithImpl<$Res>
+    implements $ReturnedToMainCopyWith<$Res> {
+  _$ReturnedToMainCopyWithImpl(
+      ReturnedToMain _value, $Res Function(ReturnedToMain) _then)
+      : super(_value, (v) => _then(v as ReturnedToMain));
 
   @override
-  _ReturnedToMain get _value => super._value as _ReturnedToMain;
+  ReturnedToMain get _value => super._value as ReturnedToMain;
 }
 
 /// @nodoc
-class _$_ReturnedToMain implements _ReturnedToMain {
-  const _$_ReturnedToMain();
+class _$ReturnedToMain implements ReturnedToMain {
+  const _$ReturnedToMain();
 
   @override
   String toString() {
@@ -109,7 +108,7 @@ class _$_ReturnedToMain implements _ReturnedToMain {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _ReturnedToMain);
+    return identical(this, other) || (other is ReturnedToMain);
   }
 
   @override
@@ -146,9 +145,9 @@ class _$_ReturnedToMain implements _ReturnedToMain {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult returnedToMain(_ReturnedToMain value),
-    @required TResult showWherePressed(_ShowWherePressed value),
-    @required TResult storyOnClickPressed(_StoryOnClickPressed value),
+    @required TResult returnedToMain(ReturnedToMain value),
+    @required TResult showWherePressed(RouterEventShowWherePressed value),
+    @required TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
   }) {
     assert(returnedToMain != null);
     assert(showWherePressed != null);
@@ -159,9 +158,9 @@ class _$_ReturnedToMain implements _ReturnedToMain {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult returnedToMain(_ReturnedToMain value),
-    TResult showWherePressed(_ShowWherePressed value),
-    TResult storyOnClickPressed(_StoryOnClickPressed value),
+    TResult returnedToMain(ReturnedToMain value),
+    TResult showWherePressed(RouterEventShowWherePressed value),
+    TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -172,32 +171,34 @@ class _$_ReturnedToMain implements _ReturnedToMain {
   }
 }
 
-abstract class _ReturnedToMain implements RouterEvent {
-  const factory _ReturnedToMain() = _$_ReturnedToMain;
+abstract class ReturnedToMain implements RouterEvent {
+  const factory ReturnedToMain() = _$ReturnedToMain;
 }
 
 /// @nodoc
-abstract class _$ShowWherePressedCopyWith<$Res> {
-  factory _$ShowWherePressedCopyWith(
-          _ShowWherePressed value, $Res Function(_ShowWherePressed) then) =
-      __$ShowWherePressedCopyWithImpl<$Res>;
+abstract class $RouterEventShowWherePressedCopyWith<$Res> {
+  factory $RouterEventShowWherePressedCopyWith(
+          RouterEventShowWherePressed value,
+          $Res Function(RouterEventShowWherePressed) then) =
+      _$RouterEventShowWherePressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ShowWherePressedCopyWithImpl<$Res>
+class _$RouterEventShowWherePressedCopyWithImpl<$Res>
     extends _$RouterEventCopyWithImpl<$Res>
-    implements _$ShowWherePressedCopyWith<$Res> {
-  __$ShowWherePressedCopyWithImpl(
-      _ShowWherePressed _value, $Res Function(_ShowWherePressed) _then)
-      : super(_value, (v) => _then(v as _ShowWherePressed));
+    implements $RouterEventShowWherePressedCopyWith<$Res> {
+  _$RouterEventShowWherePressedCopyWithImpl(RouterEventShowWherePressed _value,
+      $Res Function(RouterEventShowWherePressed) _then)
+      : super(_value, (v) => _then(v as RouterEventShowWherePressed));
 
   @override
-  _ShowWherePressed get _value => super._value as _ShowWherePressed;
+  RouterEventShowWherePressed get _value =>
+      super._value as RouterEventShowWherePressed;
 }
 
 /// @nodoc
-class _$_ShowWherePressed implements _ShowWherePressed {
-  const _$_ShowWherePressed();
+class _$RouterEventShowWherePressed implements RouterEventShowWherePressed {
+  const _$RouterEventShowWherePressed();
 
   @override
   String toString() {
@@ -206,7 +207,7 @@ class _$_ShowWherePressed implements _ShowWherePressed {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _ShowWherePressed);
+    return identical(this, other) || (other is RouterEventShowWherePressed);
   }
 
   @override
@@ -243,9 +244,9 @@ class _$_ShowWherePressed implements _ShowWherePressed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult returnedToMain(_ReturnedToMain value),
-    @required TResult showWherePressed(_ShowWherePressed value),
-    @required TResult storyOnClickPressed(_StoryOnClickPressed value),
+    @required TResult returnedToMain(ReturnedToMain value),
+    @required TResult showWherePressed(RouterEventShowWherePressed value),
+    @required TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
   }) {
     assert(returnedToMain != null);
     assert(showWherePressed != null);
@@ -256,9 +257,9 @@ class _$_ShowWherePressed implements _ShowWherePressed {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult returnedToMain(_ReturnedToMain value),
-    TResult showWherePressed(_ShowWherePressed value),
-    TResult storyOnClickPressed(_StoryOnClickPressed value),
+    TResult returnedToMain(ReturnedToMain value),
+    TResult showWherePressed(RouterEventShowWherePressed value),
+    TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -269,32 +270,36 @@ class _$_ShowWherePressed implements _ShowWherePressed {
   }
 }
 
-abstract class _ShowWherePressed implements RouterEvent {
-  const factory _ShowWherePressed() = _$_ShowWherePressed;
+abstract class RouterEventShowWherePressed implements RouterEvent {
+  const factory RouterEventShowWherePressed() = _$RouterEventShowWherePressed;
 }
 
 /// @nodoc
-abstract class _$StoryOnClickPressedCopyWith<$Res> {
-  factory _$StoryOnClickPressedCopyWith(_StoryOnClickPressed value,
-          $Res Function(_StoryOnClickPressed) then) =
-      __$StoryOnClickPressedCopyWithImpl<$Res>;
+abstract class $RouterEventStoryOnClickPressedCopyWith<$Res> {
+  factory $RouterEventStoryOnClickPressedCopyWith(
+          RouterEventStoryOnClickPressed value,
+          $Res Function(RouterEventStoryOnClickPressed) then) =
+      _$RouterEventStoryOnClickPressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$StoryOnClickPressedCopyWithImpl<$Res>
+class _$RouterEventStoryOnClickPressedCopyWithImpl<$Res>
     extends _$RouterEventCopyWithImpl<$Res>
-    implements _$StoryOnClickPressedCopyWith<$Res> {
-  __$StoryOnClickPressedCopyWithImpl(
-      _StoryOnClickPressed _value, $Res Function(_StoryOnClickPressed) _then)
-      : super(_value, (v) => _then(v as _StoryOnClickPressed));
+    implements $RouterEventStoryOnClickPressedCopyWith<$Res> {
+  _$RouterEventStoryOnClickPressedCopyWithImpl(
+      RouterEventStoryOnClickPressed _value,
+      $Res Function(RouterEventStoryOnClickPressed) _then)
+      : super(_value, (v) => _then(v as RouterEventStoryOnClickPressed));
 
   @override
-  _StoryOnClickPressed get _value => super._value as _StoryOnClickPressed;
+  RouterEventStoryOnClickPressed get _value =>
+      super._value as RouterEventStoryOnClickPressed;
 }
 
 /// @nodoc
-class _$_StoryOnClickPressed implements _StoryOnClickPressed {
-  const _$_StoryOnClickPressed();
+class _$RouterEventStoryOnClickPressed
+    implements RouterEventStoryOnClickPressed {
+  const _$RouterEventStoryOnClickPressed();
 
   @override
   String toString() {
@@ -303,7 +308,7 @@ class _$_StoryOnClickPressed implements _StoryOnClickPressed {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _StoryOnClickPressed);
+    return identical(this, other) || (other is RouterEventStoryOnClickPressed);
   }
 
   @override
@@ -340,9 +345,9 @@ class _$_StoryOnClickPressed implements _StoryOnClickPressed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult returnedToMain(_ReturnedToMain value),
-    @required TResult showWherePressed(_ShowWherePressed value),
-    @required TResult storyOnClickPressed(_StoryOnClickPressed value),
+    @required TResult returnedToMain(ReturnedToMain value),
+    @required TResult showWherePressed(RouterEventShowWherePressed value),
+    @required TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
   }) {
     assert(returnedToMain != null);
     assert(showWherePressed != null);
@@ -353,9 +358,9 @@ class _$_StoryOnClickPressed implements _StoryOnClickPressed {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult returnedToMain(_ReturnedToMain value),
-    TResult showWherePressed(_ShowWherePressed value),
-    TResult storyOnClickPressed(_StoryOnClickPressed value),
+    TResult returnedToMain(ReturnedToMain value),
+    TResult showWherePressed(RouterEventShowWherePressed value),
+    TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -366,8 +371,9 @@ class _$_StoryOnClickPressed implements _StoryOnClickPressed {
   }
 }
 
-abstract class _StoryOnClickPressed implements RouterEvent {
-  const factory _StoryOnClickPressed() = _$_StoryOnClickPressed;
+abstract class RouterEventStoryOnClickPressed implements RouterEvent {
+  const factory RouterEventStoryOnClickPressed() =
+      _$RouterEventStoryOnClickPressed;
 }
 
 /// @nodoc
@@ -375,18 +381,18 @@ class _$RouterStateTearOff {
   const _$RouterStateTearOff();
 
 // ignore: unused_element
-  _Init init() {
-    return const _Init();
+  Init init() {
+    return const Init();
   }
 
 // ignore: unused_element
-  _ShowWhere showWhere() {
-    return const _ShowWhere();
+  RouterStateShowWhere showWhere() {
+    return const RouterStateShowWhere();
   }
 
 // ignore: unused_element
-  _ShowStoryOnClick showStoryOnClick() {
-    return const _ShowStoryOnClick();
+  RouterStateShowStoryOnClick showStoryOnClick() {
+    return const RouterStateShowStoryOnClick();
   }
 }
 
@@ -411,15 +417,15 @@ mixin _$RouterState {
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult init(_Init value),
-    @required TResult showWhere(_ShowWhere value),
-    @required TResult showStoryOnClick(_ShowStoryOnClick value),
+    @required TResult init(Init value),
+    @required TResult showWhere(RouterStateShowWhere value),
+    @required TResult showStoryOnClick(RouterStateShowStoryOnClick value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult init(_Init value),
-    TResult showWhere(_ShowWhere value),
-    TResult showStoryOnClick(_ShowStoryOnClick value),
+    TResult init(Init value),
+    TResult showWhere(RouterStateShowWhere value),
+    TResult showStoryOnClick(RouterStateShowStoryOnClick value),
     @required TResult orElse(),
   });
 }
@@ -441,24 +447,24 @@ class _$RouterStateCopyWithImpl<$Res> implements $RouterStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$InitCopyWith<$Res> {
-  factory _$InitCopyWith(_Init value, $Res Function(_Init) then) =
-      __$InitCopyWithImpl<$Res>;
+abstract class $InitCopyWith<$Res> {
+  factory $InitCopyWith(Init value, $Res Function(Init) then) =
+      _$InitCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$InitCopyWithImpl<$Res> extends _$RouterStateCopyWithImpl<$Res>
-    implements _$InitCopyWith<$Res> {
-  __$InitCopyWithImpl(_Init _value, $Res Function(_Init) _then)
-      : super(_value, (v) => _then(v as _Init));
+class _$InitCopyWithImpl<$Res> extends _$RouterStateCopyWithImpl<$Res>
+    implements $InitCopyWith<$Res> {
+  _$InitCopyWithImpl(Init _value, $Res Function(Init) _then)
+      : super(_value, (v) => _then(v as Init));
 
   @override
-  _Init get _value => super._value as _Init;
+  Init get _value => super._value as Init;
 }
 
 /// @nodoc
-class _$_Init implements _Init {
-  const _$_Init();
+class _$Init implements Init {
+  const _$Init();
 
   @override
   String toString() {
@@ -467,7 +473,7 @@ class _$_Init implements _Init {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Init);
+    return identical(this, other) || (other is Init);
   }
 
   @override
@@ -504,9 +510,9 @@ class _$_Init implements _Init {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult init(_Init value),
-    @required TResult showWhere(_ShowWhere value),
-    @required TResult showStoryOnClick(_ShowStoryOnClick value),
+    @required TResult init(Init value),
+    @required TResult showWhere(RouterStateShowWhere value),
+    @required TResult showStoryOnClick(RouterStateShowStoryOnClick value),
   }) {
     assert(init != null);
     assert(showWhere != null);
@@ -517,9 +523,9 @@ class _$_Init implements _Init {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult init(_Init value),
-    TResult showWhere(_ShowWhere value),
-    TResult showStoryOnClick(_ShowStoryOnClick value),
+    TResult init(Init value),
+    TResult showWhere(RouterStateShowWhere value),
+    TResult showStoryOnClick(RouterStateShowStoryOnClick value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -530,30 +536,32 @@ class _$_Init implements _Init {
   }
 }
 
-abstract class _Init implements RouterState {
-  const factory _Init() = _$_Init;
+abstract class Init implements RouterState {
+  const factory Init() = _$Init;
 }
 
 /// @nodoc
-abstract class _$ShowWhereCopyWith<$Res> {
-  factory _$ShowWhereCopyWith(
-          _ShowWhere value, $Res Function(_ShowWhere) then) =
-      __$ShowWhereCopyWithImpl<$Res>;
+abstract class $RouterStateShowWhereCopyWith<$Res> {
+  factory $RouterStateShowWhereCopyWith(RouterStateShowWhere value,
+          $Res Function(RouterStateShowWhere) then) =
+      _$RouterStateShowWhereCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ShowWhereCopyWithImpl<$Res> extends _$RouterStateCopyWithImpl<$Res>
-    implements _$ShowWhereCopyWith<$Res> {
-  __$ShowWhereCopyWithImpl(_ShowWhere _value, $Res Function(_ShowWhere) _then)
-      : super(_value, (v) => _then(v as _ShowWhere));
+class _$RouterStateShowWhereCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res>
+    implements $RouterStateShowWhereCopyWith<$Res> {
+  _$RouterStateShowWhereCopyWithImpl(
+      RouterStateShowWhere _value, $Res Function(RouterStateShowWhere) _then)
+      : super(_value, (v) => _then(v as RouterStateShowWhere));
 
   @override
-  _ShowWhere get _value => super._value as _ShowWhere;
+  RouterStateShowWhere get _value => super._value as RouterStateShowWhere;
 }
 
 /// @nodoc
-class _$_ShowWhere implements _ShowWhere {
-  const _$_ShowWhere();
+class _$RouterStateShowWhere implements RouterStateShowWhere {
+  const _$RouterStateShowWhere();
 
   @override
   String toString() {
@@ -562,7 +570,7 @@ class _$_ShowWhere implements _ShowWhere {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _ShowWhere);
+    return identical(this, other) || (other is RouterStateShowWhere);
   }
 
   @override
@@ -599,9 +607,9 @@ class _$_ShowWhere implements _ShowWhere {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult init(_Init value),
-    @required TResult showWhere(_ShowWhere value),
-    @required TResult showStoryOnClick(_ShowStoryOnClick value),
+    @required TResult init(Init value),
+    @required TResult showWhere(RouterStateShowWhere value),
+    @required TResult showStoryOnClick(RouterStateShowStoryOnClick value),
   }) {
     assert(init != null);
     assert(showWhere != null);
@@ -612,9 +620,9 @@ class _$_ShowWhere implements _ShowWhere {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult init(_Init value),
-    TResult showWhere(_ShowWhere value),
-    TResult showStoryOnClick(_ShowStoryOnClick value),
+    TResult init(Init value),
+    TResult showWhere(RouterStateShowWhere value),
+    TResult showStoryOnClick(RouterStateShowStoryOnClick value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -625,32 +633,34 @@ class _$_ShowWhere implements _ShowWhere {
   }
 }
 
-abstract class _ShowWhere implements RouterState {
-  const factory _ShowWhere() = _$_ShowWhere;
+abstract class RouterStateShowWhere implements RouterState {
+  const factory RouterStateShowWhere() = _$RouterStateShowWhere;
 }
 
 /// @nodoc
-abstract class _$ShowStoryOnClickCopyWith<$Res> {
-  factory _$ShowStoryOnClickCopyWith(
-          _ShowStoryOnClick value, $Res Function(_ShowStoryOnClick) then) =
-      __$ShowStoryOnClickCopyWithImpl<$Res>;
+abstract class $RouterStateShowStoryOnClickCopyWith<$Res> {
+  factory $RouterStateShowStoryOnClickCopyWith(
+          RouterStateShowStoryOnClick value,
+          $Res Function(RouterStateShowStoryOnClick) then) =
+      _$RouterStateShowStoryOnClickCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ShowStoryOnClickCopyWithImpl<$Res>
+class _$RouterStateShowStoryOnClickCopyWithImpl<$Res>
     extends _$RouterStateCopyWithImpl<$Res>
-    implements _$ShowStoryOnClickCopyWith<$Res> {
-  __$ShowStoryOnClickCopyWithImpl(
-      _ShowStoryOnClick _value, $Res Function(_ShowStoryOnClick) _then)
-      : super(_value, (v) => _then(v as _ShowStoryOnClick));
+    implements $RouterStateShowStoryOnClickCopyWith<$Res> {
+  _$RouterStateShowStoryOnClickCopyWithImpl(RouterStateShowStoryOnClick _value,
+      $Res Function(RouterStateShowStoryOnClick) _then)
+      : super(_value, (v) => _then(v as RouterStateShowStoryOnClick));
 
   @override
-  _ShowStoryOnClick get _value => super._value as _ShowStoryOnClick;
+  RouterStateShowStoryOnClick get _value =>
+      super._value as RouterStateShowStoryOnClick;
 }
 
 /// @nodoc
-class _$_ShowStoryOnClick implements _ShowStoryOnClick {
-  const _$_ShowStoryOnClick();
+class _$RouterStateShowStoryOnClick implements RouterStateShowStoryOnClick {
+  const _$RouterStateShowStoryOnClick();
 
   @override
   String toString() {
@@ -659,7 +669,7 @@ class _$_ShowStoryOnClick implements _ShowStoryOnClick {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _ShowStoryOnClick);
+    return identical(this, other) || (other is RouterStateShowStoryOnClick);
   }
 
   @override
@@ -696,9 +706,9 @@ class _$_ShowStoryOnClick implements _ShowStoryOnClick {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult init(_Init value),
-    @required TResult showWhere(_ShowWhere value),
-    @required TResult showStoryOnClick(_ShowStoryOnClick value),
+    @required TResult init(Init value),
+    @required TResult showWhere(RouterStateShowWhere value),
+    @required TResult showStoryOnClick(RouterStateShowStoryOnClick value),
   }) {
     assert(init != null);
     assert(showWhere != null);
@@ -709,9 +719,9 @@ class _$_ShowStoryOnClick implements _ShowStoryOnClick {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult init(_Init value),
-    TResult showWhere(_ShowWhere value),
-    TResult showStoryOnClick(_ShowStoryOnClick value),
+    TResult init(Init value),
+    TResult showWhere(RouterStateShowWhere value),
+    TResult showStoryOnClick(RouterStateShowStoryOnClick value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -722,6 +732,6 @@ class _$_ShowStoryOnClick implements _ShowStoryOnClick {
   }
 }
 
-abstract class _ShowStoryOnClick implements RouterState {
-  const factory _ShowStoryOnClick() = _$_ShowStoryOnClick;
+abstract class RouterStateShowStoryOnClick implements RouterState {
+  const factory RouterStateShowStoryOnClick() = _$RouterStateShowStoryOnClick;
 }

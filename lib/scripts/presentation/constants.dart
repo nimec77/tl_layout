@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 final kLayoutTheme = ThemeData.light().copyWith(
   // scaffoldBackgroundColor: Colors.black,
+  accentColor: Colors.deepPurple,
   appBarTheme: const AppBarTheme().copyWith(
     color: Colors.deepPurple,
   ),

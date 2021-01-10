@@ -1,0 +1,4 @@
+enum PlanetAnimations {
+  showImage,
+  hideAndShowNew,
+}

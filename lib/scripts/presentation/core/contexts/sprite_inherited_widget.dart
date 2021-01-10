@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tl_layout/scripts/domain/core/sprite_data.dart';
+import 'package:tl_layout/scripts/domain/core/entities/sprite_data.dart';
 
 @immutable
 class SpriteInheritedWidget extends InheritedWidget {
