@@ -10,9 +10,12 @@ class StoryOnClick extends StatelessWidget {
       body: Center(
         child: Hero(
           tag: 'Earth',
-          child: Image.asset(
-            'assets/earth.gif',
-            fit: BoxFit.fitWidth,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Image.asset(
+              'assets/earth.gif',
+              fit: BoxFit.fitWidth,
+            ),
           ),
         ),
       ),

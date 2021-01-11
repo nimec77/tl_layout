@@ -16,8 +16,7 @@ class AppNavigator extends StatelessWidget {
   Widget build(BuildContext context) {
     final state = context.watch<RouterBloc>().state;
     return BlocProvider<PlanetWhereBloc>(
-      create: (context) =>
-          PlanetWhereBloc(routerBloc: context.read<RouterBloc>())..add(const PlanetWhereEvent.showWhereStarted()),
+      create: (context) => PlanetWhereBloc(routerBloc: context.read<RouterBloc>()),
       child: Navigator(
         pages: [
           MaterialPage(

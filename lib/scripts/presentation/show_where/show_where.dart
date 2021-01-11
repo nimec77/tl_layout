@@ -44,7 +44,7 @@ class ShowWhere extends StatelessWidget {
                     displayFullTextOnTap: true,
                     speed: const Duration(milliseconds: 200),
                     pause: const Duration(milliseconds: 300),
-                    text: const ['Покажи где', 'Сатурн'],
+                    text: const ['Покажи где', 'Сатурн?'],
                     textStyle: Theme.of(context).textTheme.headline5.copyWith(color: Colors.white),
                   ),
                 ],

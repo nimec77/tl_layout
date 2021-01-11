@@ -1,17 +1,17 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:meta/meta.dart';
 import 'package:tl_layout/scripts/domain/core/bloc/router/router_bloc.dart';
 import 'package:tl_layout/scripts/domain/helpers/random_iterator.dart';
 import 'package:tl_layout/scripts/presentation/constants.dart';
 
+part 'planet_where_bloc.freezed.dart';
+
 part 'planet_where_event.dart';
 
 part 'planet_where_state.dart';
-
-part 'planet_where_bloc.freezed.dart';
 
 class PlanetWhereBloc extends Bloc<PlanetWhereEvent, PlanetWhereState> {
   final RouterBloc routerBloc;
@@ -21,6 +21,9 @@ class PlanetWhereBloc extends Bloc<PlanetWhereEvent, PlanetWhereState> {
   int _refreshTimes = 0;
 
   PlanetWhereBloc({@required this.routerBloc}) : super(const PlanetWhereState.init()) {
+    if (routerBloc.state == const RouterState.showWhere()) {
+      add(const PlanetWhereEvent.showWhereStarted());
+    }
     _routerBlocSubscription = routerBloc.listen((state) {
       state.maybeWhen(
         showWhere: () => add(const PlanetWhereEvent.showWhereStarted()),
@@ -42,7 +45,7 @@ class PlanetWhereBloc extends Bloc<PlanetWhereEvent, PlanetWhereState> {
       );
 
   Stream<PlanetWhereState> _showWhereStartedToState() async* {
-    _randomIterator ??= RandomIterator(kPlanetList.length, 6, 5);
+    _randomIterator = RandomIterator(kPlanetList.length, 6, 5);
     _newRandomIterator = null;
     yield PlanetWhereState.showInProgress(randomIterator: _randomIterator);
   }
