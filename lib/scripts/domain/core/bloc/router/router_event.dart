@@ -4,7 +4,7 @@ part of 'router_bloc.dart';
 abstract class RouterEvent with _$RouterEvent {
   const factory RouterEvent.returnedToMain() = ReturnedToMain;
 
-  const factory RouterEvent.showWherePressed() = RouterEventShowWherePressed;
+  const factory RouterEvent.showWherePressed() = RouterShowWherePressed;
 
-  const factory RouterEvent.storyOnClickPressed() = RouterEventStoryOnClickPressed;
+  const factory RouterEvent.storyOnClickPressed() = RouterStoryOnClickPressed;
 }

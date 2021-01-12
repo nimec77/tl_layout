@@ -14,13 +14,13 @@ class _$PlanetWhereEventTearOff {
   const _$PlanetWhereEventTearOff();
 
 // ignore: unused_element
-  PlanetWhereEventShowWhereStarted showWhereStarted() {
-    return const PlanetWhereEventShowWhereStarted();
+  PlanetWhereStarted showWhereStarted() {
+    return const PlanetWhereStarted();
   }
 
 // ignore: unused_element
-  PlanetWhereEventRefreshed refreshed() {
-    return const PlanetWhereEventRefreshed();
+  PlanetWhereRefreshed refreshed() {
+    return const PlanetWhereRefreshed();
   }
 }
 
@@ -43,13 +43,13 @@ mixin _$PlanetWhereEvent {
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult showWhereStarted(PlanetWhereEventShowWhereStarted value),
-    @required TResult refreshed(PlanetWhereEventRefreshed value),
+    @required TResult showWhereStarted(PlanetWhereStarted value),
+    @required TResult refreshed(PlanetWhereRefreshed value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult showWhereStarted(PlanetWhereEventShowWhereStarted value),
-    TResult refreshed(PlanetWhereEventRefreshed value),
+    TResult showWhereStarted(PlanetWhereStarted value),
+    TResult refreshed(PlanetWhereRefreshed value),
     @required TResult orElse(),
   });
 }
@@ -72,31 +72,27 @@ class _$PlanetWhereEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $PlanetWhereEventShowWhereStartedCopyWith<$Res> {
-  factory $PlanetWhereEventShowWhereStartedCopyWith(
-          PlanetWhereEventShowWhereStarted value,
-          $Res Function(PlanetWhereEventShowWhereStarted) then) =
-      _$PlanetWhereEventShowWhereStartedCopyWithImpl<$Res>;
+abstract class $PlanetWhereStartedCopyWith<$Res> {
+  factory $PlanetWhereStartedCopyWith(
+          PlanetWhereStarted value, $Res Function(PlanetWhereStarted) then) =
+      _$PlanetWhereStartedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$PlanetWhereEventShowWhereStartedCopyWithImpl<$Res>
+class _$PlanetWhereStartedCopyWithImpl<$Res>
     extends _$PlanetWhereEventCopyWithImpl<$Res>
-    implements $PlanetWhereEventShowWhereStartedCopyWith<$Res> {
-  _$PlanetWhereEventShowWhereStartedCopyWithImpl(
-      PlanetWhereEventShowWhereStarted _value,
-      $Res Function(PlanetWhereEventShowWhereStarted) _then)
-      : super(_value, (v) => _then(v as PlanetWhereEventShowWhereStarted));
+    implements $PlanetWhereStartedCopyWith<$Res> {
+  _$PlanetWhereStartedCopyWithImpl(
+      PlanetWhereStarted _value, $Res Function(PlanetWhereStarted) _then)
+      : super(_value, (v) => _then(v as PlanetWhereStarted));
 
   @override
-  PlanetWhereEventShowWhereStarted get _value =>
-      super._value as PlanetWhereEventShowWhereStarted;
+  PlanetWhereStarted get _value => super._value as PlanetWhereStarted;
 }
 
 /// @nodoc
-class _$PlanetWhereEventShowWhereStarted
-    implements PlanetWhereEventShowWhereStarted {
-  const _$PlanetWhereEventShowWhereStarted();
+class _$PlanetWhereStarted implements PlanetWhereStarted {
+  const _$PlanetWhereStarted();
 
   @override
   String toString() {
@@ -105,8 +101,7 @@ class _$PlanetWhereEventShowWhereStarted
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is PlanetWhereEventShowWhereStarted);
+    return identical(this, other) || (other is PlanetWhereStarted);
   }
 
   @override
@@ -140,8 +135,8 @@ class _$PlanetWhereEventShowWhereStarted
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult showWhereStarted(PlanetWhereEventShowWhereStarted value),
-    @required TResult refreshed(PlanetWhereEventRefreshed value),
+    @required TResult showWhereStarted(PlanetWhereStarted value),
+    @required TResult refreshed(PlanetWhereRefreshed value),
   }) {
     assert(showWhereStarted != null);
     assert(refreshed != null);
@@ -151,8 +146,8 @@ class _$PlanetWhereEventShowWhereStarted
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult showWhereStarted(PlanetWhereEventShowWhereStarted value),
-    TResult refreshed(PlanetWhereEventRefreshed value),
+    TResult showWhereStarted(PlanetWhereStarted value),
+    TResult refreshed(PlanetWhereRefreshed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -163,34 +158,32 @@ class _$PlanetWhereEventShowWhereStarted
   }
 }
 
-abstract class PlanetWhereEventShowWhereStarted implements PlanetWhereEvent {
-  const factory PlanetWhereEventShowWhereStarted() =
-      _$PlanetWhereEventShowWhereStarted;
+abstract class PlanetWhereStarted implements PlanetWhereEvent {
+  const factory PlanetWhereStarted() = _$PlanetWhereStarted;
 }
 
 /// @nodoc
-abstract class $PlanetWhereEventRefreshedCopyWith<$Res> {
-  factory $PlanetWhereEventRefreshedCopyWith(PlanetWhereEventRefreshed value,
-          $Res Function(PlanetWhereEventRefreshed) then) =
-      _$PlanetWhereEventRefreshedCopyWithImpl<$Res>;
+abstract class $PlanetWhereRefreshedCopyWith<$Res> {
+  factory $PlanetWhereRefreshedCopyWith(PlanetWhereRefreshed value,
+          $Res Function(PlanetWhereRefreshed) then) =
+      _$PlanetWhereRefreshedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$PlanetWhereEventRefreshedCopyWithImpl<$Res>
+class _$PlanetWhereRefreshedCopyWithImpl<$Res>
     extends _$PlanetWhereEventCopyWithImpl<$Res>
-    implements $PlanetWhereEventRefreshedCopyWith<$Res> {
-  _$PlanetWhereEventRefreshedCopyWithImpl(PlanetWhereEventRefreshed _value,
-      $Res Function(PlanetWhereEventRefreshed) _then)
-      : super(_value, (v) => _then(v as PlanetWhereEventRefreshed));
+    implements $PlanetWhereRefreshedCopyWith<$Res> {
+  _$PlanetWhereRefreshedCopyWithImpl(
+      PlanetWhereRefreshed _value, $Res Function(PlanetWhereRefreshed) _then)
+      : super(_value, (v) => _then(v as PlanetWhereRefreshed));
 
   @override
-  PlanetWhereEventRefreshed get _value =>
-      super._value as PlanetWhereEventRefreshed;
+  PlanetWhereRefreshed get _value => super._value as PlanetWhereRefreshed;
 }
 
 /// @nodoc
-class _$PlanetWhereEventRefreshed implements PlanetWhereEventRefreshed {
-  const _$PlanetWhereEventRefreshed();
+class _$PlanetWhereRefreshed implements PlanetWhereRefreshed {
+  const _$PlanetWhereRefreshed();
 
   @override
   String toString() {
@@ -199,7 +192,7 @@ class _$PlanetWhereEventRefreshed implements PlanetWhereEventRefreshed {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is PlanetWhereEventRefreshed);
+    return identical(this, other) || (other is PlanetWhereRefreshed);
   }
 
   @override
@@ -233,8 +226,8 @@ class _$PlanetWhereEventRefreshed implements PlanetWhereEventRefreshed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult showWhereStarted(PlanetWhereEventShowWhereStarted value),
-    @required TResult refreshed(PlanetWhereEventRefreshed value),
+    @required TResult showWhereStarted(PlanetWhereStarted value),
+    @required TResult refreshed(PlanetWhereRefreshed value),
   }) {
     assert(showWhereStarted != null);
     assert(refreshed != null);
@@ -244,8 +237,8 @@ class _$PlanetWhereEventRefreshed implements PlanetWhereEventRefreshed {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult showWhereStarted(PlanetWhereEventShowWhereStarted value),
-    TResult refreshed(PlanetWhereEventRefreshed value),
+    TResult showWhereStarted(PlanetWhereStarted value),
+    TResult refreshed(PlanetWhereRefreshed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -256,8 +249,8 @@ class _$PlanetWhereEventRefreshed implements PlanetWhereEventRefreshed {
   }
 }
 
-abstract class PlanetWhereEventRefreshed implements PlanetWhereEvent {
-  const factory PlanetWhereEventRefreshed() = _$PlanetWhereEventRefreshed;
+abstract class PlanetWhereRefreshed implements PlanetWhereEvent {
+  const factory PlanetWhereRefreshed() = _$PlanetWhereRefreshed;
 }
 
 /// @nodoc

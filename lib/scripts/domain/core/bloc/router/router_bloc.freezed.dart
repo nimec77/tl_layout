@@ -19,13 +19,13 @@ class _$RouterEventTearOff {
   }
 
 // ignore: unused_element
-  RouterEventShowWherePressed showWherePressed() {
-    return const RouterEventShowWherePressed();
+  RouterShowWherePressed showWherePressed() {
+    return const RouterShowWherePressed();
   }
 
 // ignore: unused_element
-  RouterEventStoryOnClickPressed storyOnClickPressed() {
-    return const RouterEventStoryOnClickPressed();
+  RouterStoryOnClickPressed storyOnClickPressed() {
+    return const RouterStoryOnClickPressed();
   }
 }
 
@@ -51,14 +51,14 @@ mixin _$RouterEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult returnedToMain(ReturnedToMain value),
-    @required TResult showWherePressed(RouterEventShowWherePressed value),
-    @required TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
+    @required TResult showWherePressed(RouterShowWherePressed value),
+    @required TResult storyOnClickPressed(RouterStoryOnClickPressed value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult returnedToMain(ReturnedToMain value),
-    TResult showWherePressed(RouterEventShowWherePressed value),
-    TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
+    TResult showWherePressed(RouterShowWherePressed value),
+    TResult storyOnClickPressed(RouterStoryOnClickPressed value),
     @required TResult orElse(),
   });
 }
@@ -146,8 +146,8 @@ class _$ReturnedToMain implements ReturnedToMain {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult returnedToMain(ReturnedToMain value),
-    @required TResult showWherePressed(RouterEventShowWherePressed value),
-    @required TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
+    @required TResult showWherePressed(RouterShowWherePressed value),
+    @required TResult storyOnClickPressed(RouterStoryOnClickPressed value),
   }) {
     assert(returnedToMain != null);
     assert(showWherePressed != null);
@@ -159,8 +159,8 @@ class _$ReturnedToMain implements ReturnedToMain {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult returnedToMain(ReturnedToMain value),
-    TResult showWherePressed(RouterEventShowWherePressed value),
-    TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
+    TResult showWherePressed(RouterShowWherePressed value),
+    TResult storyOnClickPressed(RouterStoryOnClickPressed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -176,29 +176,27 @@ abstract class ReturnedToMain implements RouterEvent {
 }
 
 /// @nodoc
-abstract class $RouterEventShowWherePressedCopyWith<$Res> {
-  factory $RouterEventShowWherePressedCopyWith(
-          RouterEventShowWherePressed value,
-          $Res Function(RouterEventShowWherePressed) then) =
-      _$RouterEventShowWherePressedCopyWithImpl<$Res>;
+abstract class $RouterShowWherePressedCopyWith<$Res> {
+  factory $RouterShowWherePressedCopyWith(RouterShowWherePressed value,
+          $Res Function(RouterShowWherePressed) then) =
+      _$RouterShowWherePressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RouterEventShowWherePressedCopyWithImpl<$Res>
+class _$RouterShowWherePressedCopyWithImpl<$Res>
     extends _$RouterEventCopyWithImpl<$Res>
-    implements $RouterEventShowWherePressedCopyWith<$Res> {
-  _$RouterEventShowWherePressedCopyWithImpl(RouterEventShowWherePressed _value,
-      $Res Function(RouterEventShowWherePressed) _then)
-      : super(_value, (v) => _then(v as RouterEventShowWherePressed));
+    implements $RouterShowWherePressedCopyWith<$Res> {
+  _$RouterShowWherePressedCopyWithImpl(RouterShowWherePressed _value,
+      $Res Function(RouterShowWherePressed) _then)
+      : super(_value, (v) => _then(v as RouterShowWherePressed));
 
   @override
-  RouterEventShowWherePressed get _value =>
-      super._value as RouterEventShowWherePressed;
+  RouterShowWherePressed get _value => super._value as RouterShowWherePressed;
 }
 
 /// @nodoc
-class _$RouterEventShowWherePressed implements RouterEventShowWherePressed {
-  const _$RouterEventShowWherePressed();
+class _$RouterShowWherePressed implements RouterShowWherePressed {
+  const _$RouterShowWherePressed();
 
   @override
   String toString() {
@@ -207,7 +205,7 @@ class _$RouterEventShowWherePressed implements RouterEventShowWherePressed {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is RouterEventShowWherePressed);
+    return identical(this, other) || (other is RouterShowWherePressed);
   }
 
   @override
@@ -245,8 +243,8 @@ class _$RouterEventShowWherePressed implements RouterEventShowWherePressed {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult returnedToMain(ReturnedToMain value),
-    @required TResult showWherePressed(RouterEventShowWherePressed value),
-    @required TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
+    @required TResult showWherePressed(RouterShowWherePressed value),
+    @required TResult storyOnClickPressed(RouterStoryOnClickPressed value),
   }) {
     assert(returnedToMain != null);
     assert(showWherePressed != null);
@@ -258,8 +256,8 @@ class _$RouterEventShowWherePressed implements RouterEventShowWherePressed {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult returnedToMain(ReturnedToMain value),
-    TResult showWherePressed(RouterEventShowWherePressed value),
-    TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
+    TResult showWherePressed(RouterShowWherePressed value),
+    TResult storyOnClickPressed(RouterStoryOnClickPressed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -270,36 +268,33 @@ class _$RouterEventShowWherePressed implements RouterEventShowWherePressed {
   }
 }
 
-abstract class RouterEventShowWherePressed implements RouterEvent {
-  const factory RouterEventShowWherePressed() = _$RouterEventShowWherePressed;
+abstract class RouterShowWherePressed implements RouterEvent {
+  const factory RouterShowWherePressed() = _$RouterShowWherePressed;
 }
 
 /// @nodoc
-abstract class $RouterEventStoryOnClickPressedCopyWith<$Res> {
-  factory $RouterEventStoryOnClickPressedCopyWith(
-          RouterEventStoryOnClickPressed value,
-          $Res Function(RouterEventStoryOnClickPressed) then) =
-      _$RouterEventStoryOnClickPressedCopyWithImpl<$Res>;
+abstract class $RouterStoryOnClickPressedCopyWith<$Res> {
+  factory $RouterStoryOnClickPressedCopyWith(RouterStoryOnClickPressed value,
+          $Res Function(RouterStoryOnClickPressed) then) =
+      _$RouterStoryOnClickPressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RouterEventStoryOnClickPressedCopyWithImpl<$Res>
+class _$RouterStoryOnClickPressedCopyWithImpl<$Res>
     extends _$RouterEventCopyWithImpl<$Res>
-    implements $RouterEventStoryOnClickPressedCopyWith<$Res> {
-  _$RouterEventStoryOnClickPressedCopyWithImpl(
-      RouterEventStoryOnClickPressed _value,
-      $Res Function(RouterEventStoryOnClickPressed) _then)
-      : super(_value, (v) => _then(v as RouterEventStoryOnClickPressed));
+    implements $RouterStoryOnClickPressedCopyWith<$Res> {
+  _$RouterStoryOnClickPressedCopyWithImpl(RouterStoryOnClickPressed _value,
+      $Res Function(RouterStoryOnClickPressed) _then)
+      : super(_value, (v) => _then(v as RouterStoryOnClickPressed));
 
   @override
-  RouterEventStoryOnClickPressed get _value =>
-      super._value as RouterEventStoryOnClickPressed;
+  RouterStoryOnClickPressed get _value =>
+      super._value as RouterStoryOnClickPressed;
 }
 
 /// @nodoc
-class _$RouterEventStoryOnClickPressed
-    implements RouterEventStoryOnClickPressed {
-  const _$RouterEventStoryOnClickPressed();
+class _$RouterStoryOnClickPressed implements RouterStoryOnClickPressed {
+  const _$RouterStoryOnClickPressed();
 
   @override
   String toString() {
@@ -308,7 +303,7 @@ class _$RouterEventStoryOnClickPressed
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is RouterEventStoryOnClickPressed);
+    return identical(this, other) || (other is RouterStoryOnClickPressed);
   }
 
   @override
@@ -346,8 +341,8 @@ class _$RouterEventStoryOnClickPressed
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult returnedToMain(ReturnedToMain value),
-    @required TResult showWherePressed(RouterEventShowWherePressed value),
-    @required TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
+    @required TResult showWherePressed(RouterShowWherePressed value),
+    @required TResult storyOnClickPressed(RouterStoryOnClickPressed value),
   }) {
     assert(returnedToMain != null);
     assert(showWherePressed != null);
@@ -359,8 +354,8 @@ class _$RouterEventStoryOnClickPressed
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult returnedToMain(ReturnedToMain value),
-    TResult showWherePressed(RouterEventShowWherePressed value),
-    TResult storyOnClickPressed(RouterEventStoryOnClickPressed value),
+    TResult showWherePressed(RouterShowWherePressed value),
+    TResult storyOnClickPressed(RouterStoryOnClickPressed value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -371,9 +366,8 @@ class _$RouterEventStoryOnClickPressed
   }
 }
 
-abstract class RouterEventStoryOnClickPressed implements RouterEvent {
-  const factory RouterEventStoryOnClickPressed() =
-      _$RouterEventStoryOnClickPressed;
+abstract class RouterStoryOnClickPressed implements RouterEvent {
+  const factory RouterStoryOnClickPressed() = _$RouterStoryOnClickPressed;
 }
 
 /// @nodoc
