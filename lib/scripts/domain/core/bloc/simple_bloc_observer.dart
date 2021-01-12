@@ -10,7 +10,7 @@ class SimpleBlocObserver extends BlocObserver {
 
   @override
   void onError(Cubit cubit, Object error, StackTrace stackTrace) {
-    debugPrint('onError $error');
+    debugPrint('onError $error, $stackTrace');
     super.onError(cubit, error, stackTrace);
   }
 
@@ -18,5 +18,11 @@ class SimpleBlocObserver extends BlocObserver {
   void onEvent(Bloc bloc, Object event) {
     debugPrint('onEvent $event');
     super.onEvent(bloc, event);
+  }
+
+  @override
+  void onChange(Cubit cubit, Change change) {
+    debugPrint('onChange $change');
+    super.onChange(cubit, change);
   }
 }
