@@ -32,6 +32,7 @@ mixin _$SpriteData {
   ImageMap get imageMap;
   SpriteSheet get spriteSheet;
 
+  @JsonKey(ignore: true)
   $SpriteDataCopyWith<SpriteData> get copyWith;
 }
 
@@ -141,6 +142,7 @@ class _$_SpriteData with DiagnosticableTreeMixin implements _SpriteData {
       const DeepCollectionEquality().hash(imageMap) ^
       const DeepCollectionEquality().hash(spriteSheet);
 
+  @JsonKey(ignore: true)
   @override
   _$SpriteDataCopyWith<_SpriteData> get copyWith =>
       __$SpriteDataCopyWithImpl<_SpriteData>(this, _$identity);
@@ -156,5 +158,6 @@ abstract class _SpriteData implements SpriteData {
   @override
   SpriteSheet get spriteSheet;
   @override
+  @JsonKey(ignore: true)
   _$SpriteDataCopyWith<_SpriteData> get copyWith;
 }

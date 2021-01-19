@@ -501,6 +501,7 @@ class _$PlanetWhereStateShowInProgress
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(randomIterator);
 
+  @JsonKey(ignore: true)
   @override
   $PlanetWhereStateShowInProgressCopyWith<PlanetWhereStateShowInProgress>
       get copyWith => _$PlanetWhereStateShowInProgressCopyWithImpl<
@@ -573,6 +574,7 @@ abstract class PlanetWhereStateShowInProgress implements PlanetWhereState {
       _$PlanetWhereStateShowInProgress;
 
   RandomIterator get randomIterator;
+  @JsonKey(ignore: true)
   $PlanetWhereStateShowInProgressCopyWith<PlanetWhereStateShowInProgress>
       get copyWith;
 }
@@ -666,6 +668,7 @@ class _$PlanetWhereStateRefreshInProgress
       const DeepCollectionEquality().hash(newRandomIterator) ^
       const DeepCollectionEquality().hash(refreshTimes);
 
+  @JsonKey(ignore: true)
   @override
   $PlanetWhereStateRefreshInProgressCopyWith<PlanetWhereStateRefreshInProgress>
       get copyWith => _$PlanetWhereStateRefreshInProgressCopyWithImpl<
@@ -741,6 +744,7 @@ abstract class PlanetWhereStateRefreshInProgress implements PlanetWhereState {
   RandomIterator get randomIterator;
   RandomIterator get newRandomIterator;
   int get refreshTimes;
+  @JsonKey(ignore: true)
   $PlanetWhereStateRefreshInProgressCopyWith<PlanetWhereStateRefreshInProgress>
       get copyWith;
 }
