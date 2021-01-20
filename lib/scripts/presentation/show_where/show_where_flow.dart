@@ -16,6 +16,8 @@ class ShowWhereFlow extends StatelessWidget {
     );
   }
 
+  final _heroController = HeroController();
+
   @override
   Widget build(BuildContext context) {
     return FlowBuilder<ShowWhereState>(
@@ -24,6 +26,7 @@ class ShowWhereFlow extends StatelessWidget {
         init: (_) => [ShowWhere.page()],
         planetSelectSuccess: (value) => [PlanetPage.page(value.planetEnum)],
       ),
+      observers: [_heroController],
     );
   }
 }

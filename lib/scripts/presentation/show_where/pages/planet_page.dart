@@ -46,10 +46,10 @@ class PlanetPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Hero(
-                  tag: image,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Hero(
+                    tag: planetEnum,
                     child: Image.asset(
                       image,
                       fit: BoxFit.fitWidth,
