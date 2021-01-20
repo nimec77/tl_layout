@@ -34,12 +34,7 @@ class StarsNode extends Node {
       speedVar: 1.5,
       maxParticles: kNumStarts ~/ 1.7,
       emissionRate: kNumStarts / 1.7,
-      // colorSequence: ColorSequence(kStarColors, [0.0, 0.5, 1.0]),
       alphaVar: 255,
-      // redVar: 100,
-      // greenVar: 119,
-      // blueVar: 66,
-      // autoRemoveOnFinish: false,
       gravity: Offset.zero,
     );
 

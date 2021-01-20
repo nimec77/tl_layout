@@ -17,6 +17,13 @@ class _$ShowWhereStateTearOff {
   ShowWhereStateInit init() {
     return const ShowWhereStateInit();
   }
+
+// ignore: unused_element
+  ShowWhereStatePlanetSelectSuccess planetSelectSuccess(PlanetEnum planetEnum) {
+    return ShowWhereStatePlanetSelectSuccess(
+      planetEnum,
+    );
+  }
 }
 
 /// @nodoc
@@ -28,19 +35,24 @@ mixin _$ShowWhereState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult init(),
+    @required TResult planetSelectSuccess(PlanetEnum planetEnum),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult init(),
+    TResult planetSelectSuccess(PlanetEnum planetEnum),
     @required TResult orElse(),
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult init(ShowWhereStateInit value),
+    @required
+        TResult planetSelectSuccess(ShowWhereStatePlanetSelectSuccess value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult init(ShowWhereStateInit value),
+    TResult planetSelectSuccess(ShowWhereStatePlanetSelectSuccess value),
     @required TResult orElse(),
   });
 }
@@ -102,8 +114,10 @@ class _$ShowWhereStateInit implements ShowWhereStateInit {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult init(),
+    @required TResult planetSelectSuccess(PlanetEnum planetEnum),
   }) {
     assert(init != null);
+    assert(planetSelectSuccess != null);
     return init();
   }
 
@@ -111,6 +125,7 @@ class _$ShowWhereStateInit implements ShowWhereStateInit {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult init(),
+    TResult planetSelectSuccess(PlanetEnum planetEnum),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -124,8 +139,11 @@ class _$ShowWhereStateInit implements ShowWhereStateInit {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult init(ShowWhereStateInit value),
+    @required
+        TResult planetSelectSuccess(ShowWhereStatePlanetSelectSuccess value),
   }) {
     assert(init != null);
+    assert(planetSelectSuccess != null);
     return init(this);
   }
 
@@ -133,6 +151,7 @@ class _$ShowWhereStateInit implements ShowWhereStateInit {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult init(ShowWhereStateInit value),
+    TResult planetSelectSuccess(ShowWhereStatePlanetSelectSuccess value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -145,4 +164,131 @@ class _$ShowWhereStateInit implements ShowWhereStateInit {
 
 abstract class ShowWhereStateInit implements ShowWhereState {
   const factory ShowWhereStateInit() = _$ShowWhereStateInit;
+}
+
+/// @nodoc
+abstract class $ShowWhereStatePlanetSelectSuccessCopyWith<$Res> {
+  factory $ShowWhereStatePlanetSelectSuccessCopyWith(
+          ShowWhereStatePlanetSelectSuccess value,
+          $Res Function(ShowWhereStatePlanetSelectSuccess) then) =
+      _$ShowWhereStatePlanetSelectSuccessCopyWithImpl<$Res>;
+  $Res call({PlanetEnum planetEnum});
+}
+
+/// @nodoc
+class _$ShowWhereStatePlanetSelectSuccessCopyWithImpl<$Res>
+    extends _$ShowWhereStateCopyWithImpl<$Res>
+    implements $ShowWhereStatePlanetSelectSuccessCopyWith<$Res> {
+  _$ShowWhereStatePlanetSelectSuccessCopyWithImpl(
+      ShowWhereStatePlanetSelectSuccess _value,
+      $Res Function(ShowWhereStatePlanetSelectSuccess) _then)
+      : super(_value, (v) => _then(v as ShowWhereStatePlanetSelectSuccess));
+
+  @override
+  ShowWhereStatePlanetSelectSuccess get _value =>
+      super._value as ShowWhereStatePlanetSelectSuccess;
+
+  @override
+  $Res call({
+    Object planetEnum = freezed,
+  }) {
+    return _then(ShowWhereStatePlanetSelectSuccess(
+      planetEnum == freezed ? _value.planetEnum : planetEnum as PlanetEnum,
+    ));
+  }
+}
+
+/// @nodoc
+class _$ShowWhereStatePlanetSelectSuccess
+    implements ShowWhereStatePlanetSelectSuccess {
+  const _$ShowWhereStatePlanetSelectSuccess(this.planetEnum)
+      : assert(planetEnum != null);
+
+  @override
+  final PlanetEnum planetEnum;
+
+  @override
+  String toString() {
+    return 'ShowWhereState.planetSelectSuccess(planetEnum: $planetEnum)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ShowWhereStatePlanetSelectSuccess &&
+            (identical(other.planetEnum, planetEnum) ||
+                const DeepCollectionEquality()
+                    .equals(other.planetEnum, planetEnum)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(planetEnum);
+
+  @JsonKey(ignore: true)
+  @override
+  $ShowWhereStatePlanetSelectSuccessCopyWith<ShowWhereStatePlanetSelectSuccess>
+      get copyWith => _$ShowWhereStatePlanetSelectSuccessCopyWithImpl<
+          ShowWhereStatePlanetSelectSuccess>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult init(),
+    @required TResult planetSelectSuccess(PlanetEnum planetEnum),
+  }) {
+    assert(init != null);
+    assert(planetSelectSuccess != null);
+    return planetSelectSuccess(planetEnum);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult init(),
+    TResult planetSelectSuccess(PlanetEnum planetEnum),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (planetSelectSuccess != null) {
+      return planetSelectSuccess(planetEnum);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult init(ShowWhereStateInit value),
+    @required
+        TResult planetSelectSuccess(ShowWhereStatePlanetSelectSuccess value),
+  }) {
+    assert(init != null);
+    assert(planetSelectSuccess != null);
+    return planetSelectSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult init(ShowWhereStateInit value),
+    TResult planetSelectSuccess(ShowWhereStatePlanetSelectSuccess value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (planetSelectSuccess != null) {
+      return planetSelectSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ShowWhereStatePlanetSelectSuccess implements ShowWhereState {
+  const factory ShowWhereStatePlanetSelectSuccess(PlanetEnum planetEnum) =
+      _$ShowWhereStatePlanetSelectSuccess;
+
+  PlanetEnum get planetEnum;
+  @JsonKey(ignore: true)
+  $ShowWhereStatePlanetSelectSuccessCopyWith<ShowWhereStatePlanetSelectSuccess>
+      get copyWith;
 }

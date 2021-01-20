@@ -33,7 +33,8 @@ class LayoutApp extends StatelessWidget {
     return SpriteInheritedWidget(
       spriteData: spriteData,
       child: MaterialApp(
-        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        title: 'Talking Lesson Planets',
         theme: kLayoutTheme,
         home: AppFlow(),
       ),

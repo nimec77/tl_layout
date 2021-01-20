@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tl_layout/scripts/domain/planet/entities/planet_animations.dart';
+import 'package:tl_layout/scripts/domain/planet/entities/planet_enum.dart';
+import 'package:tl_layout/scripts/domain/show_where/bloc/navigator/show_where_cubit.dart';
 
 class PlanetItem extends StatefulWidget {
   final PlanetAnimations planetAnimations;
+  final PlanetEnum planetEnum;
   final String image;
   final String newImage;
 
-  const PlanetItem({Key key, @required this.planetAnimations, @required this.image, this.newImage})
+  const PlanetItem(
+      {Key key, @required this.planetEnum, @required this.planetAnimations, @required this.image, this.newImage})
       : assert(planetAnimations != null),
+        assert(planetEnum != null),
         assert(image != null),
         super(key: key);
 
@@ -59,7 +65,10 @@ class _PlanetItemState extends State<PlanetItem> with SingleTickerProviderStateM
     return ScaleTransition(
       scale: _animation,
       child: GestureDetector(
-        onTap: () => debugPrint(_image),
+        onTap: () {
+          debugPrint(widget.planetEnum.toString());
+          context.read<ShowWhereCubit>().select(widget.planetEnum);
+        },
         child: Hero(
           tag: _image,
           child: Image.asset(
