@@ -1,10 +1,12 @@
+import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:spritewidget/spritewidget.dart';
 import 'package:tl_layout/scripts/presentation/core/contexts/sprite_inherited_widget.dart';
 import 'package:tl_layout/scripts/presentation/core/node_widgets/starry_sky.dart';
-import 'package:tl_layout/scripts/presentation/core/widgets/build_sky.dart';
+import 'package:tl_layout/scripts/presentation/story_on_click/story_flow.dart';
 
 import '../constants.dart';
+import '../core/widgets/build_sky.dart';
 
 class StoryOnClick extends StatelessWidget {
   @override
@@ -13,6 +15,7 @@ class StoryOnClick extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(onPressed: () => context.flow<StoryStates>().complete()),
         title: const Text('Планеты солнечной системы'),
       ),
       body: Stack(

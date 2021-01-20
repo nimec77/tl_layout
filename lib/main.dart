@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spritewidget/spritewidget.dart';
-import 'package:tl_layout/scripts/domain/core/bloc/router/router_bloc.dart';
 import 'package:tl_layout/scripts/domain/core/bloc/simple_bloc_observer.dart';
 import 'package:tl_layout/scripts/domain/core/entities/sprite_data.dart';
 import 'package:tl_layout/scripts/presentation/constants.dart';
 import 'package:tl_layout/scripts/presentation/core/contexts/sprite_inherited_widget.dart';
-import 'package:tl_layout/scripts/presentation/core/navigators/app_navigator.dart';
+import 'package:tl_layout/scripts/presentation/core/flows/app_flow.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,15 +30,12 @@ class LayoutApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<RouterBloc>(
-      create: (context) => RouterBloc(),
-      child: SpriteInheritedWidget(
-        spriteData: spriteData,
-        child: MaterialApp(
-          title: 'Flutter Demo',
-          theme: kLayoutTheme,
-          home: AppNavigator(),
-        ),
+    return SpriteInheritedWidget(
+      spriteData: spriteData,
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: kLayoutTheme,
+        home: AppFlow(),
       ),
     );
   }

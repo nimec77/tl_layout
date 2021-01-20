@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tl_layout/scripts/domain/core/bloc/router/router_bloc.dart';
+import 'package:tl_layout/scripts/presentation/core/widgets/script_button.dart';
+import 'package:tl_layout/scripts/presentation/show_where/show_where_flow.dart';
+import 'package:tl_layout/scripts/presentation/story_on_click/story_flow.dart';
 
-import 'widgets/script_button.dart';
-
-class AppWidget extends StatelessWidget {
+class AppFlow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,17 +15,17 @@ class AppWidget extends StatelessWidget {
               Text('Сценарии', style: Theme.of(context).textTheme.headline6),
               const SizedBox(height: 40),
               ScriptButton(
-                onPressed: () => context.read<RouterBloc>().add(const RouterEvent.showWherePressed()),
+                onPressed: () => Navigator.of(context).push(ShowWhereFlow.route()),
                 title: 'Покажи, где...',
               ),
               const SizedBox(height: 40),
               ScriptButton(
-                onPressed: () => context.read<RouterBloc>().add(const RouterEvent.storyOnClickPressed()),
+                onPressed: () => Navigator.of(context).push(StoryFlow.route()),
                 title: 'Рассказ по клику',
               ),
               const SizedBox(height: 40),
               GestureDetector(
-                onTap: () => context.read<RouterBloc>().add(const RouterEvent.storyOnClickPressed()),
+                onTap: () => Navigator.of(context).push(StoryFlow.route()),
                 child: Hero(
                   tag: 'Earth',
                   child: Image.asset(

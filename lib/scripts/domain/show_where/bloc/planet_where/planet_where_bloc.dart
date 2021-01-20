@@ -3,34 +3,20 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';
-import 'package:tl_layout/scripts/domain/core/bloc/router/router_bloc.dart';
 import 'package:tl_layout/scripts/domain/helpers/random_iterator.dart';
 import 'package:tl_layout/scripts/presentation/constants.dart';
 
 part 'planet_where_bloc.freezed.dart';
-
 part 'planet_where_event.dart';
-
 part 'planet_where_state.dart';
 
 class PlanetWhereBloc extends Bloc<PlanetWhereEvent, PlanetWhereState> {
-  final RouterBloc routerBloc;
   RandomIterator _randomIterator;
   RandomIterator _newRandomIterator;
   StreamSubscription _routerBlocSubscription;
   int _refreshTimes = 0;
 
-  PlanetWhereBloc({@required this.routerBloc}) : super(const PlanetWhereState.init()) {
-    if (routerBloc.state == const RouterState.showWhere()) {
-      add(const PlanetWhereEvent.showWhereStarted());
-    }
-    _routerBlocSubscription = routerBloc.listen((state) {
-      state.maybeWhen(
-        showWhere: () => add(const PlanetWhereEvent.showWhereStarted()),
-        orElse: () => null,
-      );
-    });
-  }
+  PlanetWhereBloc() : super(const PlanetWhereState.init());
 
   @override
   Future<void> close() {
