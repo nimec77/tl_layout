@@ -1,12 +1,12 @@
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spritewidget/spritewidget.dart';
 import 'package:tl_layout/scripts/domain/planet/entities/planet_enum.dart';
 import 'package:tl_layout/scripts/domain/show_where/bloc/navigator/show_where_cubit.dart';
 import 'package:tl_layout/scripts/presentation/core/contexts/sprite_inherited_widget.dart';
 import 'package:tl_layout/scripts/presentation/core/node_widgets/starry_sky.dart';
 import 'package:tl_layout/scripts/presentation/core/widgets/build_sky.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../constants.dart';
 
@@ -51,7 +51,7 @@ class PlanetPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Hero(
-                    tag: image,
+                    tag: planetEnum,
                     child: Image.asset(
                       image,
                       fit: BoxFit.fitWidth,
