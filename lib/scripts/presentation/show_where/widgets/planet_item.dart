@@ -70,7 +70,7 @@ class _PlanetItemState extends State<PlanetItem> with SingleTickerProviderStateM
           context.read<ShowWhereCubit>().select(widget.planetEnum);
         },
         child: Hero(
-          tag: _image,
+          tag: widget.planetEnum,
           child: Image.asset(
             _image,
             key: ValueKey(_image),

@@ -32,7 +32,7 @@ class PlanetsGrid extends StatelessWidget {
               showInProgress: (state) {
                 final planetIndex = state.randomIterator.getByIndex(index);
                 return PlanetItem(
-                  key: ValueKey('showInProgress$index'),
+                  key: UniqueKey(),
                   planetAnimations: PlanetAnimations.showImage,
                   planetEnum: PlanetEnum.values[planetIndex],
                   image: kPlanetList[planetIndex],
@@ -41,7 +41,7 @@ class PlanetsGrid extends StatelessWidget {
               refreshInProgress: (state) {
                 final newPlanetIndex = state.newRandomIterator.getByIndex(index);
                 return PlanetItem(
-                  key: ValueKey('refreshInProgress$index-${state.refreshTimes}'),
+                  key: UniqueKey(),
                   planetAnimations: PlanetAnimations.hideAndShowNew,
                   planetEnum: PlanetEnum.values[newPlanetIndex],
                   image: kPlanetList[state.randomIterator.getByIndex(index)],
