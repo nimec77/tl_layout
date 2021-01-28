@@ -6,6 +6,7 @@ import 'package:tl_layout/scripts/domain/show_where/bloc/navigator/show_where_cu
 import 'package:tl_layout/scripts/presentation/core/contexts/sprite_inherited_widget.dart';
 import 'package:tl_layout/scripts/presentation/core/node_widgets/starry_sky.dart';
 import 'package:tl_layout/scripts/presentation/core/widgets/build_sky.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../constants.dart';
 
@@ -27,6 +28,7 @@ class PlanetPage extends StatelessWidget {
     final image = kPlanetList[planetEnum.index];
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(onPressed: () => context.read<ShowWhereCubit>().back()),
         title: const Text('Планеты солнечной системы'),
         centerTitle: true,
         actions: [
@@ -46,10 +48,10 @@ class PlanetPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Hero(
-                  tag: image,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Hero(
+                    tag: image,
                     child: Image.asset(
                       image,
                       fit: BoxFit.fitWidth,

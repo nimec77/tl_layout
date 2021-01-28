@@ -7,6 +7,8 @@ import 'package:tl_layout/scripts/presentation/show_where/pages/planet_page.dart
 import 'pages/show_where.dart';
 
 class ShowWhereFlow extends StatelessWidget {
+  final heroController = HeroController();
+
   static Route<ShowWhereState> route() {
     return MaterialPageRoute(
       builder: (_) => BlocProvider(
@@ -22,8 +24,9 @@ class ShowWhereFlow extends StatelessWidget {
       state: context.select<ShowWhereCubit, ShowWhereState>((cubit) => cubit.state),
       onGeneratePages: (state, pages) => state.map(
         init: (_) => [ShowWhere.page()],
-        planetSelectSuccess: (value) => [PlanetPage.page(value.planetEnum)],
+        planetSelectSuccess: (value) => [ShowWhere.page(), PlanetPage.page(value.planetEnum)],
       ),
+      observers: [heroController],
     );
   }
 }

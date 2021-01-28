@@ -8,6 +8,10 @@ part 'show_where_state.dart';
 class ShowWhereCubit extends Cubit<ShowWhereState> {
   ShowWhereCubit() : super(const ShowWhereState.init());
 
+  void back() {
+    emit(const ShowWhereState.init());
+  }
+
   void select(PlanetEnum planetEnum) {
     emit(ShowWhereState.planetSelectSuccess(planetEnum));
   }
