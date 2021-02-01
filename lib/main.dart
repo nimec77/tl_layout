@@ -6,7 +6,8 @@ import 'package:tl_layout/scripts/domain/core/bloc/simple_bloc_observer.dart';
 import 'package:tl_layout/scripts/domain/core/entities/sprite_data.dart';
 import 'package:tl_layout/scripts/presentation/constants.dart';
 import 'package:tl_layout/scripts/presentation/core/contexts/sprite_inherited_widget.dart';
-import 'package:tl_layout/scripts/presentation/core/flows/app_flow.dart';
+
+import 'scripts/presentation/core/flows/app_flow.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

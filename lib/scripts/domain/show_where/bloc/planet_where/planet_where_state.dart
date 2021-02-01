@@ -10,6 +10,6 @@ abstract class PlanetWhereState with _$PlanetWhereState {
   const factory PlanetWhereState.refreshInProgress({
     @required RandomIterator randomIterator,
     @required RandomIterator newRandomIterator,
-    @required int refreshTimes,
+    @required int keyIndex,
   }) = PlanetWhereStateRefreshInProgress;
 }
