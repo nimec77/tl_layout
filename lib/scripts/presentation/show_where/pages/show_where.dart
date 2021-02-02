@@ -3,6 +3,7 @@ import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spritewidget/spritewidget.dart';
+import 'package:tl_layout/scripts/domain/core/bloc/navigator/app_navigator_cubit.dart';
 import 'package:tl_layout/scripts/domain/show_where/bloc/navigator/show_where_cubit.dart';
 import 'package:tl_layout/scripts/domain/show_where/bloc/planet_where/planet_where_bloc.dart';
 import 'package:tl_layout/scripts/presentation/constants.dart';
@@ -25,7 +26,10 @@ class ShowWhere extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(onPressed: () => context.flow<ShowWhereState>().complete()),
+        leading: BackButton(onPressed: () {
+          context.flow<ShowWhereState>().complete();
+          context.read<AppNavigatorCubit>().main();
+        }),
         title: const Text('Планеты солнечной системы'),
       ),
       body: Stack(

@@ -6,4 +6,16 @@ part 'app_navigator_state.dart';
 
 class AppNavigatorCubit extends Cubit<AppNavigatorState> {
   AppNavigatorCubit() : super(const AppNavigatorState.init());
+
+  void main() {
+    emit(const AppNavigatorState.init());
+  }
+
+  void showWhere() {
+    emit(const AppNavigatorState.showWhereFlow());
+  }
+
+  void story() {
+    emit(const AppNavigatorState.storyFlow());
+  }
 }

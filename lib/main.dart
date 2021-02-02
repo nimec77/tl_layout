@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spritewidget/spritewidget.dart';
+import 'package:tl_layout/scripts/domain/core/bloc/navigator/app_navigator_cubit.dart';
 import 'package:tl_layout/scripts/domain/core/bloc/simple_bloc_observer.dart';
 import 'package:tl_layout/scripts/domain/core/entities/sprite_data.dart';
 import 'package:tl_layout/scripts/presentation/constants.dart';
 import 'package:tl_layout/scripts/presentation/core/contexts/sprite_inherited_widget.dart';
-
-import 'scripts/presentation/core/flows/app_flow.dart';
+import 'package:tl_layout/scripts/presentation/core/flows/app_navigator.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +37,10 @@ class LayoutApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Talking Lesson Planets',
         theme: kLayoutTheme,
-        home: AppFlow(),
+        home: BlocProvider(
+          create: (_) => AppNavigatorCubit(),
+          child: AppNavigator(),
+        ),
       ),
     );
   }

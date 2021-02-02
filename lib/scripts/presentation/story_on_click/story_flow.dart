@@ -15,6 +15,10 @@ class StoryFlow extends StatelessWidget {
     return MaterialPageRoute(builder: (_) => StoryFlow());
   }
 
+  static Page page() => MaterialPage<void>(
+        child: StoryFlow(),
+      );
+
   @override
   Widget build(BuildContext context) {
     return const FlowBuilder<StoryStates>(
