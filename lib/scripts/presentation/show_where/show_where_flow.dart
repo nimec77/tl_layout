@@ -1,6 +1,7 @@
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tl_layout/scripts/domain/core/bloc/navigator/app_navigator_cubit.dart';
 import 'package:tl_layout/scripts/domain/show_where/bloc/navigator/show_where_cubit.dart';
 import 'package:tl_layout/scripts/presentation/show_where/pages/planet_page.dart';
 
@@ -33,6 +34,7 @@ class ShowWhereFlow extends StatelessWidget {
         init: (_) => [ShowWhere.page()],
         planetSelectSuccess: (value) => [ShowWhere.page(), PlanetPage.page(value.planetEnum)],
       ),
+      onComplete: (state) => context.read<AppNavigatorCubit>().main(),
       observers: [_heroController],
     );
   }
