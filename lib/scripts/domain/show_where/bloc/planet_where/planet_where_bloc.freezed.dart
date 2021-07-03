@@ -274,11 +274,11 @@ class _$PlanetWhereStateTearOff {
   PlanetWhereStateRefreshInProgress refreshInProgress(
       {@required RandomIterator randomIterator,
       @required RandomIterator newRandomIterator,
-      @required int refreshTimes}) {
+      @required int keyIndex}) {
     return PlanetWhereStateRefreshInProgress(
       randomIterator: randomIterator,
       newRandomIterator: newRandomIterator,
-      refreshTimes: refreshTimes,
+      keyIndex: keyIndex,
     );
   }
 }
@@ -295,14 +295,14 @@ mixin _$PlanetWhereState {
     @required TResult showInProgress(RandomIterator randomIterator),
     @required
         TResult refreshInProgress(RandomIterator randomIterator,
-            RandomIterator newRandomIterator, int refreshTimes),
+            RandomIterator newRandomIterator, int keyIndex),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult init(),
     TResult showInProgress(RandomIterator randomIterator),
     TResult refreshInProgress(RandomIterator randomIterator,
-        RandomIterator newRandomIterator, int refreshTimes),
+        RandomIterator newRandomIterator, int keyIndex),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -381,7 +381,7 @@ class _$PlanetWhereStateInit implements PlanetWhereStateInit {
     @required TResult showInProgress(RandomIterator randomIterator),
     @required
         TResult refreshInProgress(RandomIterator randomIterator,
-            RandomIterator newRandomIterator, int refreshTimes),
+            RandomIterator newRandomIterator, int keyIndex),
   }) {
     assert(init != null);
     assert(showInProgress != null);
@@ -395,7 +395,7 @@ class _$PlanetWhereStateInit implements PlanetWhereStateInit {
     TResult init(),
     TResult showInProgress(RandomIterator randomIterator),
     TResult refreshInProgress(RandomIterator randomIterator,
-        RandomIterator newRandomIterator, int refreshTimes),
+        RandomIterator newRandomIterator, int keyIndex),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -514,7 +514,7 @@ class _$PlanetWhereStateShowInProgress
     @required TResult showInProgress(RandomIterator randomIterator),
     @required
         TResult refreshInProgress(RandomIterator randomIterator,
-            RandomIterator newRandomIterator, int refreshTimes),
+            RandomIterator newRandomIterator, int keyIndex),
   }) {
     assert(init != null);
     assert(showInProgress != null);
@@ -528,7 +528,7 @@ class _$PlanetWhereStateShowInProgress
     TResult init(),
     TResult showInProgress(RandomIterator randomIterator),
     TResult refreshInProgress(RandomIterator randomIterator,
-        RandomIterator newRandomIterator, int refreshTimes),
+        RandomIterator newRandomIterator, int keyIndex),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -588,7 +588,7 @@ abstract class $PlanetWhereStateRefreshInProgressCopyWith<$Res> {
   $Res call(
       {RandomIterator randomIterator,
       RandomIterator newRandomIterator,
-      int refreshTimes});
+      int keyIndex});
 }
 
 /// @nodoc
@@ -608,7 +608,7 @@ class _$PlanetWhereStateRefreshInProgressCopyWithImpl<$Res>
   $Res call({
     Object randomIterator = freezed,
     Object newRandomIterator = freezed,
-    Object refreshTimes = freezed,
+    Object keyIndex = freezed,
   }) {
     return _then(PlanetWhereStateRefreshInProgress(
       randomIterator: randomIterator == freezed
@@ -617,8 +617,7 @@ class _$PlanetWhereStateRefreshInProgressCopyWithImpl<$Res>
       newRandomIterator: newRandomIterator == freezed
           ? _value.newRandomIterator
           : newRandomIterator as RandomIterator,
-      refreshTimes:
-          refreshTimes == freezed ? _value.refreshTimes : refreshTimes as int,
+      keyIndex: keyIndex == freezed ? _value.keyIndex : keyIndex as int,
     ));
   }
 }
@@ -629,21 +628,21 @@ class _$PlanetWhereStateRefreshInProgress
   const _$PlanetWhereStateRefreshInProgress(
       {@required this.randomIterator,
       @required this.newRandomIterator,
-      @required this.refreshTimes})
+      @required this.keyIndex})
       : assert(randomIterator != null),
         assert(newRandomIterator != null),
-        assert(refreshTimes != null);
+        assert(keyIndex != null);
 
   @override
   final RandomIterator randomIterator;
   @override
   final RandomIterator newRandomIterator;
   @override
-  final int refreshTimes;
+  final int keyIndex;
 
   @override
   String toString() {
-    return 'PlanetWhereState.refreshInProgress(randomIterator: $randomIterator, newRandomIterator: $newRandomIterator, refreshTimes: $refreshTimes)';
+    return 'PlanetWhereState.refreshInProgress(randomIterator: $randomIterator, newRandomIterator: $newRandomIterator, keyIndex: $keyIndex)';
   }
 
   @override
@@ -656,9 +655,9 @@ class _$PlanetWhereStateRefreshInProgress
             (identical(other.newRandomIterator, newRandomIterator) ||
                 const DeepCollectionEquality()
                     .equals(other.newRandomIterator, newRandomIterator)) &&
-            (identical(other.refreshTimes, refreshTimes) ||
+            (identical(other.keyIndex, keyIndex) ||
                 const DeepCollectionEquality()
-                    .equals(other.refreshTimes, refreshTimes)));
+                    .equals(other.keyIndex, keyIndex)));
   }
 
   @override
@@ -666,7 +665,7 @@ class _$PlanetWhereStateRefreshInProgress
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(randomIterator) ^
       const DeepCollectionEquality().hash(newRandomIterator) ^
-      const DeepCollectionEquality().hash(refreshTimes);
+      const DeepCollectionEquality().hash(keyIndex);
 
   @JsonKey(ignore: true)
   @override
@@ -681,12 +680,12 @@ class _$PlanetWhereStateRefreshInProgress
     @required TResult showInProgress(RandomIterator randomIterator),
     @required
         TResult refreshInProgress(RandomIterator randomIterator,
-            RandomIterator newRandomIterator, int refreshTimes),
+            RandomIterator newRandomIterator, int keyIndex),
   }) {
     assert(init != null);
     assert(showInProgress != null);
     assert(refreshInProgress != null);
-    return refreshInProgress(randomIterator, newRandomIterator, refreshTimes);
+    return refreshInProgress(randomIterator, newRandomIterator, keyIndex);
   }
 
   @override
@@ -695,12 +694,12 @@ class _$PlanetWhereStateRefreshInProgress
     TResult init(),
     TResult showInProgress(RandomIterator randomIterator),
     TResult refreshInProgress(RandomIterator randomIterator,
-        RandomIterator newRandomIterator, int refreshTimes),
+        RandomIterator newRandomIterator, int keyIndex),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (refreshInProgress != null) {
-      return refreshInProgress(randomIterator, newRandomIterator, refreshTimes);
+      return refreshInProgress(randomIterator, newRandomIterator, keyIndex);
     }
     return orElse();
   }
@@ -739,11 +738,11 @@ abstract class PlanetWhereStateRefreshInProgress implements PlanetWhereState {
   const factory PlanetWhereStateRefreshInProgress(
       {@required RandomIterator randomIterator,
       @required RandomIterator newRandomIterator,
-      @required int refreshTimes}) = _$PlanetWhereStateRefreshInProgress;
+      @required int keyIndex}) = _$PlanetWhereStateRefreshInProgress;
 
   RandomIterator get randomIterator;
   RandomIterator get newRandomIterator;
-  int get refreshTimes;
+  int get keyIndex;
   @JsonKey(ignore: true)
   $PlanetWhereStateRefreshInProgressCopyWith<PlanetWhereStateRefreshInProgress>
       get copyWith;

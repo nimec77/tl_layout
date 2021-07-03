@@ -25,7 +25,9 @@ class ShowWhere extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(onPressed: () => context.flow<ShowWhereState>().complete()),
+        leading: BackButton(onPressed: () {
+          context.flow<ShowWhereState>().complete();
+        }),
         title: const Text('Планеты солнечной системы'),
       ),
       body: Stack(

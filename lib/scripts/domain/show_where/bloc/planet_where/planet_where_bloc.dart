@@ -14,7 +14,7 @@ class PlanetWhereBloc extends Bloc<PlanetWhereEvent, PlanetWhereState> {
   RandomIterator _randomIterator;
   RandomIterator _newRandomIterator;
   StreamSubscription _routerBlocSubscription;
-  int _refreshTimes = 0;
+  int _keyIndex = 0;
 
   PlanetWhereBloc() : super(const PlanetWhereState.init());
 
@@ -42,6 +42,6 @@ class PlanetWhereBloc extends Bloc<PlanetWhereEvent, PlanetWhereState> {
     }
     _newRandomIterator = RandomIterator(kPlanetList.length, 6, 5);
     yield PlanetWhereState.refreshInProgress(
-        randomIterator: _randomIterator, newRandomIterator: _newRandomIterator, refreshTimes: _refreshTimes++);
+        randomIterator: _randomIterator, newRandomIterator: _newRandomIterator, keyIndex: _keyIndex++);
   }
 }

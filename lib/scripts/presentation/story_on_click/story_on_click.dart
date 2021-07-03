@@ -15,7 +15,9 @@ class StoryOnClick extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(onPressed: () => context.flow<StoryStates>().complete()),
+        leading: BackButton(onPressed: () {
+          context.flow<StoryStates>().complete();
+        }),
         title: const Text('Планеты солнечной системы'),
       ),
       body: Stack(
