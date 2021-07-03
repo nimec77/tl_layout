@@ -65,10 +65,7 @@ class _PlanetItemState extends State<PlanetItem> with SingleTickerProviderStateM
     return ScaleTransition(
       scale: _animation,
       child: GestureDetector(
-        onTap: () {
-          debugPrint(widget.planetEnum.toString());
-          context.read<ShowWhereCubit>().select(widget.planetEnum);
-        },
+        onTap: () => context.read<ShowWhereCubit>().select(widget.planetEnum),
         child: Hero(
           tag: widget.planetEnum,
           child: Image.asset(

@@ -45,17 +45,26 @@ class ShowWhere extends StatelessWidget {
                 children: [
                   IconButton(
                     icon: const Icon(Icons.refresh),
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).colorScheme.secondary,
                     iconSize: 40,
                     onPressed: () => context.read<PlanetWhereBloc>().add(const PlanetWhereEvent.refreshed()),
                   ),
-                  TypewriterAnimatedTextKit(
+                  AnimatedTextKit(
                     isRepeatingAnimation: false,
                     displayFullTextOnTap: true,
-                    speed: const Duration(milliseconds: 200),
                     pause: const Duration(milliseconds: 300),
-                    text: const ['Покажи где', 'Сатурн?'],
-                    textStyle: Theme.of(context).textTheme.headline5.copyWith(color: Colors.white),
+                    animatedTexts: [
+                      TypewriterAnimatedText(
+                        'Покажи где',
+                        speed: const Duration(milliseconds: 200),
+                        textStyle: Theme.of(context).textTheme.headline5.copyWith(color: Colors.white),
+                      ),
+                      TypewriterAnimatedText(
+                        'Сатурн?',
+                        speed: const Duration(milliseconds: 200),
+                        textStyle: Theme.of(context).textTheme.headline5.copyWith(color: Colors.white),
+                      ),
+                    ],
                   ),
                 ],
               ),

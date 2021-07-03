@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:spritewidget/spritewidget.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:spritewidget/spritewidget.dart';
 
 part 'sprite_data.freezed.dart';
 
